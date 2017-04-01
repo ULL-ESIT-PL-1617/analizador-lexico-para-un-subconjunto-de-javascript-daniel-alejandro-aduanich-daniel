@@ -19,10 +19,10 @@ String.prototype.tokens = function () {
     var WHITES              = /\s+/g;
     var ID                  = /[a-zA-Z_]\w*/g;
     var NUM                 = /\b\d+(\.\d*)?([eE][+-]?\d+)?\b/g;
-    var STRING              = ;
-    var ONELINECOMMENT      = ;
-    var MULTIPLELINECOMMENT = ;
-    var TWOCHAROPERATORS    = ;
+    var STRING              = /('(\\.|[^'])*'|"(\\.|[^"])*")/g;
+    var ONELINECOMMENT      = /\/\/.*/g;
+    var MULTIPLELINECOMMENT = /\/[*](.|\n)*?[*]\//g; //creo que funciona revisenlo
+    var TWOCHAROPERATORS    = ; //?
     var ONECHAROPERATORS    = /([-+*\/=()&|;:,<>{}[\]])/g;
     var tokens = [WHITES, ID, NUM, STRING, ONELINECOMMENT, MULTIPLELINECOMMENT, TWOCHAROPERATORS, ONECHAROPERATORS];
     
@@ -37,12 +37,16 @@ String.prototype.tokens = function () {
         };
     };
 
-// A editar
-// Begin tokenization. If the source string is empty, return nothing.
+    var getTok = function() {
+        var str = m[0];
+        i += str.length; // Warning! side effect on i
+        return str;
+    };
 
-    if (!this) {
-        return;
-    }
+// Begin tokenization. If the source string is empty, return nothing.
+    if (!this) return;
+
+// A editar
 
 // If prefix and suffix strings are not provided, supply defaults.
 
