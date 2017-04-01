@@ -1,26 +1,15 @@
-// tokens.js
-// 2016-01-13
+"use strict";
 
-// (c) 2006 Douglas Crockford
+// Produce un array de objetos simples del tipo token a partir de una cadena
 
-// Produce an array of simple token objects from a string.
-// A simple token object contains these members:
-//      type: 'name', 'string', 'number', 'operator'
-//      value: string or number value of the token
-//      from: index of first character of the token
-//      to: index of the last character + 1
+RegExp.prototype.bexec = function(str) {
+  var i = this.lastIndex;
+  var m = this.exec(str);
+  if (m && m.index == i) return m;
+  return null;
+}
 
-// Comments of the // type are ignored.
-
-// Operators are by default single characters. Multicharacter
-// operators can be made by supplying a string of prefix and
-// suffix characters.
-// characters. For example,
-//      '<>+-&', '=>&:'
-// will match any of these:
-//      <=  >>  >>>  <>  >=  +: -: &: &&: &&
-
-/*jslint this */
+// A editar
 
 String.prototype.tokens = function (prefix, suffix) {
     'use strict';
