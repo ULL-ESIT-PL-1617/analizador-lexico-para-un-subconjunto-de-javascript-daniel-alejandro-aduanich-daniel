@@ -9,20 +9,25 @@ RegExp.prototype.bexec = function(str) {
   return null;
 }
 
+
+String.prototype.tokens = function () {
+    var from;
+    var i = 0;
+    var n;
+    var m;
+    var result = [];
+
+    var WHITES              = ;
+    var ID                  = ;
+    var NUM                 = ;
+    var STRING              = ;
+    var ONELINECOMMENT      = ;
+    var MULTIPLELINECOMMENT = ;
+    var TWOCHAROPERATORS    = ;
+    var ONECHAROPERATORS    = ;
+    var tokens = [WHITES, ID, NUM, STRING, ONELINECOMMENT, MULTIPLELINECOMMENT, TWOCHAROPERATORS, ONECHAROPERATORS];
+    
 // A editar
-
-String.prototype.tokens = function (prefix, suffix) {
-    'use strict';
-    var c;                      // The current character.
-    var from;                   // The index of the start of the token.
-    var i = 0;                  // The index of the current character.
-    var length = this.length;
-    var n;                      // The number value.
-    var q;                      // The quote character.
-    var str;                    // The string value.
-
-    var result = [];            // An array to hold the results.
-
     var make = function (type, value) {
 
 // Make a token object.
