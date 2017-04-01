@@ -52,13 +52,26 @@ String.prototype.tokens = function () {
     while (i < this.length) {
         tokens.forEach( function(t) { t.lastIndex = i;});
         from = i;
-        
         // Para ignorar comentarios y espacios en blanco
         if (m = WHITES.bexec(this) || (m = ONELINECOMMENT.bexec(this))  || (m = MULTIPLELINECOMMENT.bexec(this))) { 
             getTok(); }
         }
-        // A editar
+        // Nombres
+        else if (m = ID.bexec(this)) {
+            result.push(make('name', getTok()));
+        } 
+        // Numeros
+        else if (m = NUM.bexec(this)) {
+            n = +getTok();
+
+            if (isFinite(n)) {
+                result.push(make('number', n));
+            } else {
+                make('number', m[0]).error("Bad number");
+            }
+            // A editar
         
-        
+        }
+    }
 };
 
