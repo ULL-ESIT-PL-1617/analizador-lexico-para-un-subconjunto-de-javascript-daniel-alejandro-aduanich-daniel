@@ -54,7 +54,7 @@ String.prototype.tokens = function () {
         from = i;
         // Para ignorar comentarios y espacios en blanco
         if (m = WHITES.bexec(this) || (m = ONELINECOMMENT.bexec(this))  || (m = MULTIPLELINECOMMENT.bexec(this))) { 
-            getTok(); }
+            getTok();
         }
         // Nombres
         else if (m = ID.bexec(this)) {
@@ -69,9 +69,21 @@ String.prototype.tokens = function () {
             } else {
                 make('number', m[0]).error("Bad number");
             }
-            // A editar
-        
+        }
+        // Cadenas
+        else if (m = STRING.bexec(this)) {
+            result.push(make('string', getTok().replace(/^["']|["']$/g,'')));
+        } 
+        // Operadores de 2 caracteres
+        else if (m = TWOCHAROPERATORS.bexec(this)) {
+            result.push(make('operator', getTok()));
+        // Operadores de 1 caracter
+        } else if (m = ONECHAROPERATORS.bexec(this)){
+            result.push(make('operator', getTok()));
+        } else {
+          throw "Syntax error near '"+this.substr(i)+"'";
         }
     }
+    return result;
 };
 
