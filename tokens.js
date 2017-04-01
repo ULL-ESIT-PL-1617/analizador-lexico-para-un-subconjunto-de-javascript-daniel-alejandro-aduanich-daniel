@@ -9,7 +9,6 @@ RegExp.prototype.bexec = function(str) {
   return null;
 }
 
-
 String.prototype.tokens = function () {
     var from;
     var i = 0;
@@ -17,21 +16,19 @@ String.prototype.tokens = function () {
     var m;
     var result = [];
 
-    var WHITES              = ;
-    var ID                  = ;
-    var NUM                 = ;
+    var WHITES              = /\s+/g;
+    var ID                  = /[a-zA-Z_]\w*/g;
+    var NUM                 = /\b\d+(\.\d*)?([eE][+-]?\d+)?\b/g;
     var STRING              = ;
     var ONELINECOMMENT      = ;
     var MULTIPLELINECOMMENT = ;
     var TWOCHAROPERATORS    = ;
-    var ONECHAROPERATORS    = ;
+    var ONECHAROPERATORS    = /([-+*\/=()&|;:,<>{}[\]])/g;
     var tokens = [WHITES, ID, NUM, STRING, ONELINECOMMENT, MULTIPLELINECOMMENT, TWOCHAROPERATORS, ONECHAROPERATORS];
     
-// A editar
-    var make = function (type, value) {
-
 // Make a token object.
 
+    var make = function (type, value) {
         return {
             type: type,
             value: value,
@@ -40,6 +37,7 @@ String.prototype.tokens = function () {
         };
     };
 
+// A editar
 // Begin tokenization. If the source string is empty, return nothing.
 
     if (!this) {
