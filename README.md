@@ -18,10 +18,11 @@ tokens.js produces an array of token objects from a string.
 
 # Links al deploy
 
-* [versión gitbooks]()
-* [versión gh-pages]()
-* [versión iass]()
-* [versión heroku]()
+* [versión gitbooks](https://danielfernandezperez.gitbooks.io/analizador-adu-alex-daniel2/content/)
+* [versión gh-pages](https://ull-esit-pl-1617.github.io/analizador-lexico-para-un-subconjunto-de-javascript-daniel-alejandro-aduanich-daniel)
+* [versión gh-pages del libro con las prácticas](https://ull-esit-pl-1617.github.io/analizador-lexico-para-un-subconjunto-de-javascript-daniel-alejandro-aduanich-daniel/book)
+* [versión iass]( http://10.6.128.40/)
+* [versión heroku](https://analizador-adu-alex-daniel2.herokuapp.com/)
 
 # Links a la especificación de la práctica
 
