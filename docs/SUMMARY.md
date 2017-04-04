@@ -1,6 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
+* [Expresiones Regulares](ExpReg/Exp.md)
+
+-----
 * [Manejo de Cookies en ExpressJS](ExpressJS/EJ1.md)
 * [Ejemplo de una sesión "auth" básica en NodeJS](Sess/README.md)
 * [Ejemplo de persistencia usando Cookies y post](Persistence/Persistence-cookie&post.md)
