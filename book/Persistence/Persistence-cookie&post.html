@@ -1,0 +1,605 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Ejemplo de persistencia usando Cookies y post · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Routing/BasicR/" />
+    
+    
+    <link rel="prev" href="../Sess/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ExpReg/Exp.html">
+            
+                <a href="../ExpReg/Exp.html">
+            
+                    
+                    Expresiones Regulares
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../ExpressJS/EJ1.html">
+            
+                <a href="../ExpressJS/EJ1.html">
+            
+                    
+                    Manejo de Cookies en ExpressJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Sess/">
+            
+                <a href="../Sess/">
+            
+                    
+                    Ejemplo de una sesión "auth" básica en NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="Persistence-cookie&post.html">
+            
+                <a href="Persistence-cookie&post.html">
+            
+                    
+                    Ejemplo de persistencia usando Cookies y post
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Routing/BasicR/">
+            
+                <a href="../Routing/BasicR/">
+            
+                    
+                    Direccionamiento Básico
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Routing/RoutingG/">
+            
+                <a href="../Routing/RoutingG/">
+            
+                    
+                    Guía de Direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../Routing/UsingMDW/">
+            
+                <a href="../Routing/UsingMDW/">
+            
+                    
+                    Middlewares
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../Routing/UsingMDW/MiddlewareAp.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareAp.html">
+            
+                    
+                    Middleware de nivel de aplicación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../Routing/UsingMDW/MiddlewareDi.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareDi.html">
+            
+                    
+                    Middleware de nivel de direccionador
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../Routing/UsingMDW/MiddlewareEr.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareEr.html">
+            
+                    
+                    Middleware de manejo de errores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../Routing/UsingMDW/MiddlewareIn.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareIn.html">
+            
+                    
+                    Middleware incorporado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../Routing/UsingMDW/MiddlewareTe.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareTe.html">
+            
+                    
+                    Middleware de terceros
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../Routing/RAPID/">
+            
+                <a href="../Routing/RAPID/">
+            
+                    
+                    Documentación API Router (Express)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../TareasIniciales/NodeJS/">
+            
+                <a href="../TareasIniciales/NodeJS/">
+            
+                    
+                    Capitulo 1 - NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../TareasIniciales/Git/">
+            
+                <a href="../TareasIniciales/Git/">
+            
+                    
+                    Capitulo 2 - Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../TareasIniciales/GitHub/">
+            
+                <a href="../TareasIniciales/GitHub/">
+            
+                    
+                    Capitulo 3 - GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../TareasIniciales/AtomC9/">
+            
+                <a href="../TareasIniciales/AtomC9/">
+            
+                    
+                    Capitulo 4 - Atom, C9 y Pandoc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../TareasIniciales/AtomC9/Atom/Atom.html">
+            
+                <a href="../TareasIniciales/AtomC9/Atom/Atom.html">
+            
+                    
+                    Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../TareasIniciales/AtomC9/C9/C9.html">
+            
+                <a href="../TareasIniciales/AtomC9/C9/C9.html">
+            
+                    
+                    C9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.3" data-path="../TareasIniciales/Pandoc/pandoc.html">
+            
+                <a href="../TareasIniciales/Pandoc/pandoc.html">
+            
+                    
+                    Pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../TareasIniciales/MarkDown/">
+            
+                <a href="../TareasIniciales/MarkDown/">
+            
+                    
+                    Capitulo 5 - MarkDown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../TareasIniciales/GitBook/">
+            
+                <a href="../TareasIniciales/GitBook/">
+            
+                    
+                    Capitulo 6 -  GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../TareasIniciales/GHPages/GHPages.html">
+            
+                <a href="../TareasIniciales/GHPages/GHPages.html">
+            
+                    
+                    Capitulo 7 -  GH-Pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Ejemplo de persistencia usando Cookies y post</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="ejemplo-de-la-utilizacion-de-cookies-y-el-metodo-post-para-la-creacion-de-persistencia">Ejemplo de la utilizacion de cookies y el metodo Post para la creacion de persistencia.</h2>
+<p>Las cookies junto con el metodo Post son una buena manera de crear persistencia en el usuario.</p>
+<p>A continuaci&#xF3;n se mostrar&#xE1; un ejemplo donde se podra ver lo anteriormente mencionado:</p>
+<pre><code class="lang-bash">
+var express = require(<span class="hljs-string">&apos;express&apos;</span>)
+  , app = module.exports = express();
+
+//Clave del usuario en cuestion
+app.use(express.cookieParser(<span class="hljs-string">&apos;my secret here&apos;</span>));
+
+//decodifica la informacion recibida
+app.use(express.bodyParser());
+
+//Inicia en la raiz
+app.get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-keyword">function</span>(req, res){
+  //Si estan guardadas las cookies te manda a un HTML donde puedes borrar tus cookies
+  <span class="hljs-keyword">if</span> (req.cookies.remember) {
+    res.send(<span class="hljs-string">&apos;Remembered :). Click to &lt;a href=&quot;/forget&quot;&gt;forget&lt;/a&gt;!.&apos;</span>);
+   //En caso de que no recuerde tus cookies te manda a otro html donde te pregunta si deseas guardar tu sesion
+  } <span class="hljs-keyword">else</span> {
+    res.send(<span class="hljs-string">&apos;&lt;form method=&quot;post&quot;&gt;&lt;p&gt;Check to &lt;label&gt;&apos;</span>
+      + <span class="hljs-string">&apos;&lt;input type=&quot;checkbox&quot; name=&quot;remember&quot;/&gt; remember me&lt;/label&gt; &apos;</span>
+      + <span class="hljs-string">&apos;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;/&gt;.&lt;/p&gt;&lt;/form&gt;&apos;</span>);
+  }
+});
+
+//Funcion que borra las cookies
+app.get(<span class="hljs-string">&apos;/forget&apos;</span>, <span class="hljs-keyword">function</span>(req, res){
+  res.clearCookie(<span class="hljs-string">&apos;remember&apos;</span>);
+  res.redirect(<span class="hljs-string">&apos;back&apos;</span>);
+});
+
+app.post(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-keyword">function</span>(req, res){
+  var minute = 60 * 1000;
+  //Si ha sido pulsado el botom remeber se creara una cookie de sesion que durara 1 minuto
+  <span class="hljs-keyword">if</span> (req.body.remember) res.cookie(<span class="hljs-string">&apos;remember&apos;</span>, 1, { maxAge: minute });
+  res.redirect(<span class="hljs-string">&apos;back&apos;</span>);
+});
+
+//usa el puerto 80
+app.listen(80);
+console.log(<span class="hljs-string">&apos;Express started on port %d&apos;</span>, 80);
+</code></pre>
+<p>Un ejemplo visual de este ejemplo es este <a href="code.runnable.com/WMmPSCgdePFr1_Js/output">link</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Sess/" class="navigation navigation-prev " aria-label="Previous page: Ejemplo de una sesión "auth" básica en NodeJS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Routing/BasicR/" class="navigation navigation-next " aria-label="Next page: Direccionamiento Básico">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Ejemplo de persistencia usando Cookies y post","level":"2.3","depth":1,"next":{"title":"Direccionamiento Básico","level":"3.1","depth":1,"path":"Routing/BasicR/README.md","ref":"Routing/BasicR/README.md","articles":[]},"previous":{"title":"Ejemplo de una sesión \"auth\" básica en NodeJS","level":"2.2","depth":1,"path":"Sess/README.md","ref":"Sess/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Persistence/Persistence-cookie&post.md","mtime":"2017-04-04T20:25:43.281Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-04T20:48:10.203Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

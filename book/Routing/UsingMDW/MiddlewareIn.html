@@ -1,0 +1,646 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Middleware incorporado · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="MiddlewareTe.html" />
+    
+    
+    <link rel="prev" href="MiddlewareEr.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../ExpReg/Exp.html">
+            
+                <a href="../../ExpReg/Exp.html">
+            
+                    
+                    Expresiones Regulares
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../ExpressJS/EJ1.html">
+            
+                <a href="../../ExpressJS/EJ1.html">
+            
+                    
+                    Manejo de Cookies en ExpressJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Sess/">
+            
+                <a href="../../Sess/">
+            
+                    
+                    Ejemplo de una sesión "auth" básica en NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../Persistence/Persistence-cookie&post.html">
+            
+                <a href="../../Persistence/Persistence-cookie&post.html">
+            
+                    
+                    Ejemplo de persistencia usando Cookies y post
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../BasicR/">
+            
+                <a href="../BasicR/">
+            
+                    
+                    Direccionamiento Básico
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../RoutingG/">
+            
+                <a href="../RoutingG/">
+            
+                    
+                    Guía de Direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Middlewares
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="MiddlewareAp.html">
+            
+                <a href="MiddlewareAp.html">
+            
+                    
+                    Middleware de nivel de aplicación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="MiddlewareDi.html">
+            
+                <a href="MiddlewareDi.html">
+            
+                    
+                    Middleware de nivel de direccionador
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="MiddlewareEr.html">
+            
+                <a href="MiddlewareEr.html">
+            
+                    
+                    Middleware de manejo de errores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3.4" data-path="MiddlewareIn.html">
+            
+                <a href="MiddlewareIn.html">
+            
+                    
+                    Middleware incorporado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="MiddlewareTe.html">
+            
+                <a href="MiddlewareTe.html">
+            
+                    
+                    Middleware de terceros
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../RAPID/">
+            
+                <a href="../RAPID/">
+            
+                    
+                    Documentación API Router (Express)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../TareasIniciales/NodeJS/">
+            
+                <a href="../../TareasIniciales/NodeJS/">
+            
+                    
+                    Capitulo 1 - NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../TareasIniciales/Git/">
+            
+                <a href="../../TareasIniciales/Git/">
+            
+                    
+                    Capitulo 2 - Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../TareasIniciales/GitHub/">
+            
+                <a href="../../TareasIniciales/GitHub/">
+            
+                    
+                    Capitulo 3 - GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../TareasIniciales/AtomC9/">
+            
+                <a href="../../TareasIniciales/AtomC9/">
+            
+                    
+                    Capitulo 4 - Atom, C9 y Pandoc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../TareasIniciales/AtomC9/Atom/Atom.html">
+            
+                <a href="../../TareasIniciales/AtomC9/Atom/Atom.html">
+            
+                    
+                    Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../../TareasIniciales/AtomC9/C9/C9.html">
+            
+                <a href="../../TareasIniciales/AtomC9/C9/C9.html">
+            
+                    
+                    C9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.3" data-path="../../TareasIniciales/Pandoc/pandoc.html">
+            
+                <a href="../../TareasIniciales/Pandoc/pandoc.html">
+            
+                    
+                    Pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../../TareasIniciales/MarkDown/">
+            
+                <a href="../../TareasIniciales/MarkDown/">
+            
+                    
+                    Capitulo 5 - MarkDown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../TareasIniciales/GitBook/">
+            
+                <a href="../../TareasIniciales/GitBook/">
+            
+                    
+                    Capitulo 6 -  GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../../TareasIniciales/GHPages/GHPages.html">
+            
+                <a href="../../TareasIniciales/GHPages/GHPages.html">
+            
+                    
+                    Capitulo 7 -  GH-Pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Middleware incorporado</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="middleware-incorporado">Middleware incorporado</h2>
+<p>Desde la versi&#xF3;n 4.x, Express ya no depende de Connect. Excepto express.static, todas las funciones de middleware que se inclu&#xED;an previamente con Express est&#xE1;n ahora en m&#xF3;dulos diferentes. Consulte la lista de funciones de middleware.</p>
+<p>express.static(root, [options])</p>
+<p>La &#xFA;nica funci&#xF3;n de middleware incorporado en Express es express.static. Esta funci&#xF3;n se basa en serve-static y es responsable del servicio de activos est&#xE1;ticos de una aplicaci&#xF3;n Express.</p>
+<p>El argumento root especifica el directorio ra&#xED;z desde el que se realiza el servicio de activos est&#xE1;ticos.</p>
+<p>El objeto options opcional puede tener las siguientes propiedades:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Descripci&#xF3;n</th>
+<th>Tipo</th>
+<th>Valor predeterminado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dotfiles</td>
+<td>Opci&#xF3;n para el servicio de dotfiles. Los valores posibles son &#x201C;allow&#x201D;, &#x201C;deny&#x201D; e &#x201C;ignore&#x201D;</td>
+<td>Serie</td>
+<td>&#x201C;ignore&#x201D;</td>
+</tr>
+<tr>
+<td>etag</td>
+<td>Habilitar o inhabilitar la generaci&#xF3;n de etag</td>
+<td>Booleano</td>
+<td>true</td>
+</tr>
+<tr>
+<td>extensions</td>
+<td>Establece las reservas de extensiones de archivos.</td>
+<td>Matriz</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>index</td>
+<td>Env&#xED;a el archivo de &#xED;ndices de directorios. Establ&#xE9;zcalo en false para inhabilitar la indexaci&#xF3;n de directorios.</td>
+<td>Mixto</td>
+<td>&#x201C;index.html&#x201D;</td>
+</tr>
+<tr>
+<td>lastModified</td>
+<td>Establezca la cabecera Last-Modified en la &#xFA;ltima fecha de modificaci&#xF3;n del archivo en el sistema operativo. Los valores posibles son true o false.</td>
+<td>Booleano</td>
+<td>true</td>
+</tr>
+<tr>
+<td>maxAge</td>
+<td>Establezca la propiedad max-age de la cabecera Cache-Control en milisegundos o una serie en formato ms</td>
+<td>N&#xFA;mero</td>
+<td>0</td>
+</tr>
+<tr>
+<td>redirect</td>
+<td>Redireccionar a la &#x201C;/&#x201D; final cuando el nombre de v&#xED;a de acceso es un directorio.</td>
+<td>Booleano</td>
+<td>true</td>
+</tr>
+<tr>
+<td>setHeaders</td>
+<td>Funci&#xF3;n para establecer las cabeceras HTTP que se sirven con el archivo.</td>
+<td>Funci&#xF3;n</td>
+</tr>
+</tbody>
+</table>
+<p>A continuaci&#xF3;n, se muestra un ejemplo de uso de la funci&#xF3;n de middleware express.static con un objeto de opciones elaboradas:</p>
+<pre><code class="lang-bash">var options = {
+  dotfiles: <span class="hljs-string">&apos;ignore&apos;</span>,
+  etag: <span class="hljs-literal">false</span>,
+  extensions: [<span class="hljs-string">&apos;htm&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>],
+  index: <span class="hljs-literal">false</span>,
+  maxAge: <span class="hljs-string">&apos;1d&apos;</span>,
+  redirect: <span class="hljs-literal">false</span>,
+  <span class="hljs-built_in">set</span>Headers: <span class="hljs-keyword">function</span> (res, path, <span class="hljs-built_in">stat</span>) {
+    res.set(<span class="hljs-string">&apos;x-timestamp&apos;</span>, Date.now());
+  }
+}
+
+app.use(express.static(<span class="hljs-string">&apos;public&apos;</span>, options));
+</code></pre>
+<p>Puede tener m&#xE1;s de un directorio est&#xE1;tico para cada aplicaci&#xF3;n:</p>
+<pre><code class="lang-bash">app.use(express.static(<span class="hljs-string">&apos;public&apos;</span>));
+app.use(express.static(<span class="hljs-string">&apos;uploads&apos;</span>));
+app.use(express.static(<span class="hljs-string">&apos;files&apos;</span>));
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="MiddlewareEr.html" class="navigation navigation-prev " aria-label="Previous page: Middleware de manejo de errores">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="MiddlewareTe.html" class="navigation navigation-next " aria-label="Next page: Middleware de terceros">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Middleware incorporado","level":"3.3.4","depth":2,"next":{"title":"Middleware de terceros","level":"3.3.5","depth":2,"path":"Routing/UsingMDW/MiddlewareTe.md","ref":"Routing/UsingMDW/MiddlewareTe.md","articles":[]},"previous":{"title":"Middleware de manejo de errores","level":"3.3.3","depth":2,"path":"Routing/UsingMDW/MiddlewareEr.md","ref":"Routing/UsingMDW/MiddlewareEr.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Routing/UsingMDW/MiddlewareIn.md","mtime":"2017-04-04T20:25:43.281Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-04T20:48:10.203Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

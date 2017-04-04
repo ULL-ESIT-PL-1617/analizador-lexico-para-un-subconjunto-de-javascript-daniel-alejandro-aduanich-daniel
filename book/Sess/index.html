@@ -1,0 +1,679 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Ejemplo de una sesión "auth" básica en NodeJS · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Persistence/Persistence-cookie&post.html" />
+    
+    
+    <link rel="prev" href="../ExpressJS/EJ1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ExpReg/Exp.html">
+            
+                <a href="../ExpReg/Exp.html">
+            
+                    
+                    Expresiones Regulares
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../ExpressJS/EJ1.html">
+            
+                <a href="../ExpressJS/EJ1.html">
+            
+                    
+                    Manejo de Cookies en ExpressJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Ejemplo de una sesión "auth" básica en NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Persistence/Persistence-cookie&post.html">
+            
+                <a href="../Persistence/Persistence-cookie&post.html">
+            
+                    
+                    Ejemplo de persistencia usando Cookies y post
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Routing/BasicR/">
+            
+                <a href="../Routing/BasicR/">
+            
+                    
+                    Direccionamiento Básico
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Routing/RoutingG/">
+            
+                <a href="../Routing/RoutingG/">
+            
+                    
+                    Guía de Direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../Routing/UsingMDW/">
+            
+                <a href="../Routing/UsingMDW/">
+            
+                    
+                    Middlewares
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../Routing/UsingMDW/MiddlewareAp.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareAp.html">
+            
+                    
+                    Middleware de nivel de aplicación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../Routing/UsingMDW/MiddlewareDi.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareDi.html">
+            
+                    
+                    Middleware de nivel de direccionador
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../Routing/UsingMDW/MiddlewareEr.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareEr.html">
+            
+                    
+                    Middleware de manejo de errores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../Routing/UsingMDW/MiddlewareIn.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareIn.html">
+            
+                    
+                    Middleware incorporado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../Routing/UsingMDW/MiddlewareTe.html">
+            
+                <a href="../Routing/UsingMDW/MiddlewareTe.html">
+            
+                    
+                    Middleware de terceros
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../Routing/RAPID/">
+            
+                <a href="../Routing/RAPID/">
+            
+                    
+                    Documentación API Router (Express)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../TareasIniciales/NodeJS/">
+            
+                <a href="../TareasIniciales/NodeJS/">
+            
+                    
+                    Capitulo 1 - NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../TareasIniciales/Git/">
+            
+                <a href="../TareasIniciales/Git/">
+            
+                    
+                    Capitulo 2 - Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../TareasIniciales/GitHub/">
+            
+                <a href="../TareasIniciales/GitHub/">
+            
+                    
+                    Capitulo 3 - GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../TareasIniciales/AtomC9/">
+            
+                <a href="../TareasIniciales/AtomC9/">
+            
+                    
+                    Capitulo 4 - Atom, C9 y Pandoc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../TareasIniciales/AtomC9/Atom/Atom.html">
+            
+                <a href="../TareasIniciales/AtomC9/Atom/Atom.html">
+            
+                    
+                    Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../TareasIniciales/AtomC9/C9/C9.html">
+            
+                <a href="../TareasIniciales/AtomC9/C9/C9.html">
+            
+                    
+                    C9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.3" data-path="../TareasIniciales/Pandoc/pandoc.html">
+            
+                <a href="../TareasIniciales/Pandoc/pandoc.html">
+            
+                    
+                    Pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../TareasIniciales/MarkDown/">
+            
+                <a href="../TareasIniciales/MarkDown/">
+            
+                    
+                    Capitulo 5 - MarkDown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../TareasIniciales/GitBook/">
+            
+                <a href="../TareasIniciales/GitBook/">
+            
+                    
+                    Capitulo 6 -  GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../TareasIniciales/GHPages/GHPages.html">
+            
+                <a href="../TareasIniciales/GHPages/GHPages.html">
+            
+                    
+                    Capitulo 7 -  GH-Pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Ejemplo de una sesión "auth" básica en NodeJS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="ejemplo-de-una-sesi&#xF3;n-auth-b&#xE1;sica-en-nodejs">Ejemplo de una sesi&#xF3;n &quot;auth&quot; b&#xE1;sica en NodeJS</h2>
+<p>La autentificaci&#xF3;n es el proceso de verificar que un usuario es de hecho qui&#xE9;n &#xE9;l o ella dice ser.
+Autorizaci&#xF3;n es el proceso de determinar si el usuario tiene o no los privilegios de acceso a los recursos que &#xE9;l o ella pide.</p>
+<p>A continuaci&#xF3;n se mostrar&#xE1; un ejemplo de uso de ambos conceptos en las sesiones de ExpressJS:</p>
+<h6 id="sessionauthjs">session_auth.js</h6>
+<pre><code class="lang-bash">var express = require(<span class="hljs-string">&apos;express&apos;</span>),
+    app = express(),
+    session = require(<span class="hljs-string">&apos;express-session&apos;</span>);
+app.use(session({
+    secret: <span class="hljs-string">&apos;2C44-4D44-WppQ38S&apos;</span>,
+    resave: <span class="hljs-literal">true</span>,
+    saveUninitialized: <span class="hljs-literal">true</span>
+}));
+
+// Authentication and Authorization Middleware
+var auth = <span class="hljs-keyword">function</span>(req, res, next) {
+  <span class="hljs-keyword">if</span> (req.session &amp;&amp; req.session.user === <span class="hljs-string">&quot;amy&quot;</span> &amp;&amp; req.session.admin)
+    <span class="hljs-built_in">return</span> next();
+  <span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">return</span> res.sendStatus(401);
+};
+
+// Login endpoint
+app.get(<span class="hljs-string">&apos;/login&apos;</span>, <span class="hljs-keyword">function</span> (req, res) {
+  <span class="hljs-keyword">if</span> (!req.query.username || !req.query.password) {
+    res.send(<span class="hljs-string">&apos;login failed&apos;</span>);    
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(req.query.username === <span class="hljs-string">&quot;amy&quot;</span> || req.query.password === <span class="hljs-string">&quot;amyspassword&quot;</span>) {
+    req.session.user = <span class="hljs-string">&quot;amy&quot;</span>;
+    req.session.admin = <span class="hljs-literal">true</span>;
+    res.send(<span class="hljs-string">&quot;login success!&quot;</span>);
+  }
+});
+
+// Logout endpoint
+app.get(<span class="hljs-string">&apos;/logout&apos;</span>, <span class="hljs-keyword">function</span> (req, res) {
+  req.session.destroy();
+  res.send(<span class="hljs-string">&quot;logout success!&quot;</span>);
+});
+
+// Get content endpoint
+app.get(<span class="hljs-string">&apos;/content&apos;</span>, auth, <span class="hljs-keyword">function</span> (req, res) {
+    res.send(<span class="hljs-string">&quot;You can only see this after you&apos;ve logged in.&quot;</span>);
+});
+
+app.listen(3000);
+console.log(<span class="hljs-string">&quot;app running at http://localhost:3000&quot;</span>);
+</code></pre>
+<p>Todo esto se ejecuta empleando los siguientes comandos:</p>
+<pre><code class="lang-bash">npm install express
+npm install express-session
+node session_auth.js &amp;
+</code></pre>
+<p>Con esto se puede acceder a las siguientes URL&apos;s dentro del navegador web:</p>
+<pre><code>localhost:3000/content
+localhost:3000/login?username=amy&amp;password=amyspassword
+localhost:3000/content
+localhost:3000/logout
+localhost:3000/content
+</code></pre><h4 id="explicaci&#xF3;n-del-c&#xF3;digo">Explicaci&#xF3;n del c&#xF3;digo</h4>
+<pre><code class="lang-bash">var express = require(<span class="hljs-string">&apos;express&apos;</span>),
+    app = express(),
+    session = require(<span class="hljs-string">&apos;express-session&apos;</span>);
+app.use(session({
+    secret: <span class="hljs-string">&apos;2C44-4D44-WppQ38S&apos;</span>,
+    resave: <span class="hljs-literal">true</span>,
+    saveUninitialized: <span class="hljs-literal">true</span>
+}));
+</code></pre>
+<p>Sirve para importar los m&#xF3;dulos de express y de las sesiones de express (express-session). Crea una app de express y a&#xF1;ade una sesi&#xF3;n a la misma como si fuese un middleware.</p>
+<pre><code class="lang-bash">// Authentication and Authorization Middleware
+var auth = <span class="hljs-keyword">function</span>(req, res, next) {
+  <span class="hljs-keyword">if</span> (req.session &amp;&amp; req.session.user === <span class="hljs-string">&quot;amy&quot;</span> &amp;&amp; req.session.admin)
+    <span class="hljs-built_in">return</span> next();
+  <span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">return</span> res.sendStatus(401);
+};
+</code></pre>
+<p>Son las funciones de autentificaci&#xF3;n y autorizaci&#xF3;n del middleware. Concede acceso al siguiente paso si un usuario se valida correctamente.</p>
+<pre><code class="lang-bash">// Login endpoint
+app.get(<span class="hljs-string">&apos;/login&apos;</span>, <span class="hljs-keyword">function</span> (req, res) {
+  <span class="hljs-keyword">if</span> (!req.query.username || !req.query.password) {
+    res.send(<span class="hljs-string">&apos;login failed&apos;</span>);    
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(req.query.username === <span class="hljs-string">&quot;amy&quot;</span> || req.query.password === <span class="hljs-string">&quot;amyspassword&quot;</span>) {
+    req.session.user = <span class="hljs-string">&quot;amy&quot;</span>;
+    req.session.admin = <span class="hljs-literal">true</span>;
+    res.send(<span class="hljs-string">&quot;login success!&quot;</span>);
+  }
+});
+</code></pre>
+<p><strong>localhost:3000/login?username=amy&amp;password=amyspassword:</strong></p>
+<pre><code class="lang-bash">// Login endpoint
+app.get(<span class="hljs-string">&apos;/login&apos;</span>, <span class="hljs-keyword">function</span> (req, res) {
+  <span class="hljs-keyword">if</span> (!req.query.username || !req.query.password) {
+    res.send(<span class="hljs-string">&apos;login failed&apos;</span>);    
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(req.query.username === <span class="hljs-string">&quot;amy&quot;</span> || req.query.password === <span class="hljs-string">&quot;amyspassword&quot;</span>) {
+    req.session.user = <span class="hljs-string">&quot;amy&quot;</span>;
+    req.session.admin = <span class="hljs-literal">true</span>;
+    res.send(<span class="hljs-string">&quot;login success!&quot;</span>);
+  }
+});
+</code></pre>
+<p>Es la url de acceso y de comprobaci&#xF3;n de acceso de usuario que guarda lo antes dicho y el nivel de acceso de dicha sesion.
+La sesion ser&#xE1; completamente diferente para cada usuario y ser&#xE1; &#xFA;nica para cada uno seg&#xFA;n el navegador desde el que se acceda.</p>
+<p><strong>localhost:3000/logout:</strong></p>
+<pre><code class="lang-bash">// Logout endpoint
+app.get(<span class="hljs-string">&apos;/logout&apos;</span>, <span class="hljs-keyword">function</span> (req, res) {
+  req.session.destroy();
+  res.send(<span class="hljs-string">&quot;logout success!&quot;</span>);
+});
+</code></pre>
+<p>Se encarga de la desconexi&#xF3;n de sesi&#xF3;n mediante la destrucci&#xF3;n de la misma. Una vez destruida el usuario tendr&#xE1; que realizar de nuevo los pasos de autentificaci&#xF3;n y autorizaci&#xF3;n para que se le concedan permisos otra vez.</p>
+<p><strong>localhost:3000/content:</strong></p>
+<pre><code class="lang-bash">// Get content endpoint
+app.get(<span class="hljs-string">&apos;/content&apos;</span>, auth, <span class="hljs-keyword">function</span> (req, res) {
+    res.send(<span class="hljs-string">&quot;You can only see this after you&apos;ve logged in.&quot;</span>);
+});
+</code></pre>
+<p>Obtiene el contenido protegido. La funci&#xF3;n &quot;auth&quot; de autentificaci&#xF3;n es pasada como par&#xE1;metros como un middleware antes de que se proceda a servir el contenido al usuario. Si la funci&#xF3;n &quot;auth&quot; determina que el usuario no es v&#xE1;lido, no pasar&#xE1; al contenido de la siguiente funci&#xF3;n, restringiendo el acceso.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ExpressJS/EJ1.html" class="navigation navigation-prev " aria-label="Previous page: Manejo de Cookies en ExpressJS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Persistence/Persistence-cookie&post.html" class="navigation navigation-next " aria-label="Next page: Ejemplo de persistencia usando Cookies y post">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Ejemplo de una sesión \"auth\" básica en NodeJS","level":"2.2","depth":1,"next":{"title":"Ejemplo de persistencia usando Cookies y post","level":"2.3","depth":1,"path":"Persistence/Persistence-cookie&post.md","ref":"Persistence/Persistence-cookie&post.md","articles":[]},"previous":{"title":"Manejo de Cookies en ExpressJS","level":"2.1","depth":1,"path":"ExpressJS/EJ1.md","ref":"ExpressJS/EJ1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Sess/README.md","mtime":"2017-04-04T20:25:43.281Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-04T20:48:10.203Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
